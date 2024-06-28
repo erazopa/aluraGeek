@@ -20,13 +20,17 @@ const createProducts = (name, price, image) => {
     .catch((err) => console.log(err));
 };
 
+// Agregamos para que reciba el parametro del is
 const deleteProducts = (id) => {
-  return fetch("http://localhost:3000/products", {
+  // Concatenamos el valor del parametro 
+  return fetch(`http://localhost:3000/products/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
-    },
-  });
+    }
+  })  
+  .then((res) => res.json())
+  .catch((err) => console.log(err));
 };
 
 export const conexionApi = {

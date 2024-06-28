@@ -106,7 +106,17 @@ section h1 {
   height: 100%;
   object-fit: contain;
 }
+.footer-container {
+  background-color: #593f2b;
+  text-align: center;
+}
 
+footer h1 {
+  font-size: 20px;
+}
+footer h3 {
+  color: #dabfa3;
+}
 /* computador */
 @media (min-width: 1024px) {
   .header {
